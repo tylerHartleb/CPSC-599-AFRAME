@@ -49,6 +49,16 @@
       smoothtolerance=".01"
       smooththreshold="5"
     >
+        <a-entity
+        id="boxGeometry"
+        position="0 2.0 -1"
+        rotation="45 45 0"
+        geometry="primitive: box; height: 0.6; width: 0.6; depth: 0.6"
+        material="color: #ff4b5c"
+        size-change
+        scale="0.5 0.5 0.5"
+        ></a-entity>
+        <!---
         <a-entity id="infopanel" 
         position="0 0 0.5" 
         scale="0.001 0.001 0.001" 
@@ -62,8 +72,8 @@
           position="-0.68 -0.2 0"
           text="baseline: top; shader: msdf; anchor: left; color: white; value: This is a basic yellow shirt"></a-entity>
         </a-entity>
+        -->
     </a-nft>
-    static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
   </a-scene>
 </body>
