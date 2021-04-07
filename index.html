@@ -29,9 +29,9 @@
   AFRAME.registerComponent('imagehandler', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
-        Console.log("Image found");
+        alert("Image found");
       });
-  } } );
+  }});
 </script>
 
 <body style="margin : 0px; overflow: hidden;">
