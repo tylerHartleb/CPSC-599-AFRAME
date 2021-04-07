@@ -28,7 +28,7 @@
 <script>
   AFRAME.registerComponent('imagehandler', {
     init: function () {
-      this.el.scebeEl.addeventListener('markerFound', () => {
+      this.el.scebeEl.addEventListener('markerFound', () => {
         Console.log("Image found");
       })
     }
