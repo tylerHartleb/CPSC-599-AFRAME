@@ -42,39 +42,36 @@
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
     <a-nft
+      imagehandler
       type="nft"
       url= 'https://tylerhartleb.github.io/CPSC-599-AFRAME/image-tracking/nft/super'
       smooth="true"
       smoothcount="10"
       smoothtolerance=".01"
       smooththreshold="5"
-    >
-    
-        <a-entity
-        id="boxGeometry"
-        position="0 2.0 -1"
-        rotation="45 45 0"
-        geometry="primitive: box; height: 0.6; width: 0.6; depth: 0.6"
-        material="color: #ff4b5c"
-        size-change
-        scale="0.5 0.5 0.5"
-        ></a-entity>
-
-        <a-entity id="infopanel" 
-        position="0 0 0.5" 
-        scale="0.001 0.001 0.001" 
-        geometry="primitive: plane; width: 1.5; height: 1.8"
-        material="color: #333333; shader: flat; transparent: false"
-        class="raycastable">
-          <a-entity id="title" 
-          position="-0.68 -0.1 0"
-          text="shader:msdf; anchor:left; width: 1.5; color: white; value: Yellow Shirt"></a-entity>
-          <a-entity id="description"
-          position="-0.68 -0.2 0"
-          text="baseline: top; shader: msdf; anchor: left; color: white; value: This is a basic yellow shirt"></a-entity>
-        </a-entity>
-
-    </a-nft>
+    ></a-nft>
     <a-entity camera></a-entity>
+    <a-entity id="infopanel" 
+    position="0 0 0.5" 
+    scale="0.001 0.001 0.001" 
+    geometry="primitive: plane; width: 1.5; height: 1.8"
+    material="color: #333333; shader: flat; transparent: false"
+    class="raycastable">
+      <a-entity id="title" 
+      position="-0.68 -0.1 0"
+      text="shader:msdf; anchor:left; width: 1.5; color: white; value: Yellow Shirt"></a-entity>
+      <a-entity id="description"
+      position="-0.68 -0.2 0"
+      text="baseline: top; shader: msdf; anchor: left; color: white; value: This is a basic yellow shirt"></a-entity>
+    </a-entity>
   </a-scene>
 </body>
+
+<script>
+AFRAME.registerComponent('imagehandler', {
+  init: function () {
+    console.log("image found");
+  }
+})
+
+</script>
